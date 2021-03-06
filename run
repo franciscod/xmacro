@@ -8,7 +8,7 @@ fi
 
 case $1 in
 	startvfb)
-		Xvfb $mydisp -fbdir /tmp -screen 0 800x600x8 &
+		Xvfb $mydisp -ac -fbdir /tmp -screen 0 800x600x8 &
 #		Xvfb $mydisp -fbdir /tmp -screen 0 1024x768x8 &
 		icewm -display $mydisp &
 #		xmodmap -display $mydisp /usr/X11R6/lib/X11/xmodmap.std

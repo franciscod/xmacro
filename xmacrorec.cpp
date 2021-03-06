@@ -36,6 +36,10 @@
 /***************************************************************************** 
  * Includes
  ****************************************************************************/
+
+#include <iostream>
+#include <iomanip>
+
 #include <stdio.h>		
 #include <stdlib.h>
 #include <X11/Xlibint.h>
@@ -46,16 +50,7 @@
 #include <X11/keysym.h>
 #include <X11/extensions/XTest.h>
 
-/***************************************************************************** 
- * What iostream do we have?
- ****************************************************************************/
-#ifdef HAVE_IOSTREAM
-#include <iostream>
-#include <iomanip>
-#else
-#include <iostream.h>
-#include <iomanip.h>
-#endif
+using namespace std;
 
 #define PROG "xmacrorec"
 
@@ -187,7 +182,7 @@ void parseCommandLine (int argc, char * argv[]) {
 	else if ( strcmp (argv[Index], "-k" ) == 0 && Index + 1 < argc ) {
 	  // yep, and there seems to be a parameter too, interpret it as a
 	  // number
-	  if ( sscanf ( argv[Index + 1], "%d", &QuitKey ) != 1 ) {
+	  if ( sscanf ( argv[Index + 1], "%u", &QuitKey ) != 1 ) {
 		// oops, not a valid integer
 		cerr << "Invalid parameter for '-k'." << QuitKey << endl;
 		usage ( EXIT_FAILURE );

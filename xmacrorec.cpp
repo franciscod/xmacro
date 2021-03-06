@@ -1,6 +1,7 @@
 /***************************************************************************** 
  *
  * xmacrorec - a utility for recording X mouse and key events.
+ * Portions Copyright (C) 2021 Francisco Demartino
  * Portions Copyright (C) 2000 Gabor Keresztfalvi <keresztg@mail.com>
  *
  * The recorded events are emitted to the standard output and can be played

@@ -1,6 +1,7 @@
 /***************************************************************************** 
  *
  * xmacroplay - a utility for playing X mouse and key events.
+ * Portions Copyright (C) 2021 Francisco Demartino
  * Portions Copyright (C) 2000 Gabor Keresztfalvi <keresztg@mail.com>
  *
  * The recorded events are read from the standard input.
